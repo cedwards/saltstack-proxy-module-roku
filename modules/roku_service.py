@@ -29,15 +29,12 @@ def __virtual__():
 
 
 def stop():
-    if '{}' in __opts__['proxymodule']['roku.service_stop']():
-        return True
+    return __opts__['proxymodule']['roku.service_stop']():
 
 
 def start():
-    if '{}' in  __opts__['proxymodule']['roku.service_start']():
-        return True
+    return  __opts__['proxymodule']['roku.service_start']():
 
 
 def replay():
     return __opts__['proxymodule']['roku.service_replay']()
-
